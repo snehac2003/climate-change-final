@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         section.appendChild(sceneHeader(1));
         section.appendChild(createButton('Next →', () => { currentScene++; showScene(currentScene); }, 'right'));
         
-        d3.csv('data/climate_change_dataset.csv').then(data => {
+        d3.csv('https://raw.githubusercontent.com/snehac2003/climate-change-final/master/data/climate_change_dataset.csv'').then(data => {
             const parsedData = data.map(d => ({
                 year: parseInt(d['Year'], 10),
                 avgTempC: d['Avg_Temp (°C)'] ? parseFloat(d['Avg_Temp (°C)']) : null
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let tempType = 'avgTempC';
 
         function drawChart() {
-            d3.csv('data/climate_change_dataset.csv').then(data => {
+            d3.csv('https://raw.githubusercontent.com/snehac2003/climate-change-final/master/data/climate_change_dataset.csv').then(data => {
                 const parsedData = data.map(d => ({
                     year: parseInt(d['Year'], 10),
                     avgTempC: d['Avg_Temp (°C)'] ? parseFloat(d['Avg_Temp (°C)']) : null,
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
         section.appendChild(createButton('← Back', () => { currentScene--; showScene(currentScene); }, 'left'));
         section.appendChild(createButton('Next →', () => { currentScene++; showScene(currentScene); }, 'right'));
 
-        d3.csv('data/climate_change_dataset.csv').then(data => {
+        d3.csv('https://raw.githubusercontent.com/snehac2003/climate-change-final/master/data/climate_change_dataset.csv').then(data => {
             const parsedData = data.map(d => ({
                 year: parseInt(d['Year'], 10),
                 precipitation: parseFloat(d['Precipitation (mm)'])
@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
         section.appendChild(sceneHeader(4));
         section.appendChild(createButton('← Back', () => { currentScene--; showScene(currentScene); }, 'left'));
 
-        d3.csv('data/climate_change_dataset.csv').then(data => {
+        d3.csv('https://raw.githubusercontent.com/snehac2003/climate-change-final/master/data/climate_change_dataset.csv').then(data => {
             const parsedData = data.map(d => ({
                 year: parseInt(d['Year'], 10),
                 humidity: parseFloat(d['Humidity (%)']),
