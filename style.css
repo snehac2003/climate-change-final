@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    flex-direction: column;
+}
+
+#container {
+    width: 80%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header, footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scene {
+    margin: 40px 0;
+}
+
+.scene h2 {
+    margin-bottom: 10px;
+}
+
+.scene p {
+    margin-bottom: 20px;
+}
+
+#chart1, #chart2, #chart3, #chart4 {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+}
+
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 10;
+}
